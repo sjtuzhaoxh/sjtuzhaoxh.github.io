@@ -1,40 +1,48 @@
-title: Your awesome title
-author: GitHub User
-email: your-email@domain.com
-copyright: © 2019 GitHub User
-description: > # this means to ignore newlines until "show_excerpts:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+plugins: [jekyll-paginate]
 
-show_excerpts: false # set to true to show excerpts on the homepage
+permalink: /:categories/:title/
 
-lin:
-  date_format: "%b %-d, %Y"
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input:  GFM
+  syntax_highlighter: rouge
 
-  # path to the author avatar image
-  avatar_path: assets/images/avatar.jpg
 
-  # generate social links
-  social_links:
-    twitter: jekyllrb
-    github:  jekyll
-    medium:  jekyll
-    rss: rss
-    dribbble: jekyll
-    facebook: jekyll
-    flickr:   jekyll
-    instagram: jekyll
-    linkedin: jekyll
-    pinterest: jekyll
-    youtube_user: jekyll
-    youtube_channel: UC8CXR0-3I70i1tfPg1PAE1g
-    telegram: jekyll
-    googleplus: +jekyll
-    keybase: jekyll
+paginate: 10
+paginate_path: "page/:num"
+baseurl: ""
 
-theme: lin
 
-plugins:
- - jekyll-feed
- - jekyll-seo-tag
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      styles : [highlight.css,post.css]
+      scripts : [post.js]
+
+
+
+title: "bit-ranger"
+email: sincerebravefight@gmail.com
+description: ""
+github:
+  username: bit-ranger
+swiftype:
+  searchId: iXZyPokVfxFaBTvi64Y6
+comment:
+    repo: blog
+    client_id: a6fb73b3e790e234bab8
+    client_secret: cc10aaff53a03d05ab2ee002dbf401dd7627c7a3
+
+url: "https://bit-ranger.github.io/blog"
+imgrepo: "https://bit-ranger.github.io/blog/static/img"
+
+
+#url: "http://127.0.0.1:4000"
+#imgrepo: "http://127.0.0.1:4000/static/img"
+
